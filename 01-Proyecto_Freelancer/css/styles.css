@@ -1,0 +1,227 @@
+:root {
+    --primario: rgb(243, 255, 70);
+    --secundario: rgb(69, 148, 168);
+
+    --gris: rgb(138, 136, 136);
+    --grisClaro: rgb(175, 170, 170);
+    --blanco: #fff;
+    --negro: #000;
+}
+
+/* ====================== Globales ==================== */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Quicksand', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.box-shadow {
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--blanco);
+}
+.boton {
+    color: var(--blanco);
+    background-color: var(--secundario);
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+}
+.boton:hover {
+    color: var(--negro);
+    background-color: var(--primario);
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+/* ====================== Tipografia ==================== */
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+footer {
+    text-align: center;
+}
+
+/* ============== Titulo ============ */
+.titulo {
+    margin: 1.8rem;
+}
+.titulo span {
+    font-size: 2.8rem;
+}
+
+/* ============== Utilidades ============ */
+.w-sm-100 {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto;
+    }
+}
+.flex {
+    display: flex;
+}
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* ============== Navegacion Principal============ */
+.nav-bg {
+    background-color: var(--secundario);
+}
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .navegacion-principal {
+    flex-direction: row;
+    }  
+}
+.navegacion-principal a{
+    font-size: 2rem;
+    color: var(--blanco);
+    width: 100%;
+    padding: 1.4rem;
+    text-align: center;
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--negro);
+}
+
+
+/* ==================== Hero ===================== */
+.contenedor-hero {
+    background-image: url(/img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    width: 100%;
+    margin-bottom: 4rem;
+    position: relative;
+}
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================== Servicios ===================== */
+@media (min-width: 768px) {
+    .contenedor-servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        column-gap: 2rem;
+    }
+}
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: 700;
+}
+.iconos {
+    background-color: var(--primario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+}
+
+/* ================== Formulario  ==================*/
+
+.formulario {
+    background-color: var(--gris);
+    width: min( 60rem, 100% );
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primario);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    border-radius: .5rem;
+    padding: 1.5rem;
+}
+
+textarea {
+    resize: none;
+    height: 20rem;
+}
